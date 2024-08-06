@@ -16,7 +16,11 @@ public class Calculator {
     }
 
     public Optional<Integer> divide(int a, int b) {
-        if (b == 0) {return Optional.empty();}
-        else {return Optional.of(a / b);}
+        if (b == 0) {
+            return Optional.empty();
+        }
+        else {
+            return Optional.of(a / b);
+        }
     }
 }
