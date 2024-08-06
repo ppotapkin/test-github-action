@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@main
 
       - name: Merge main -> major_rc
-        uses: devmasx/merge-branch@main
+        uses: devmasx/merge-branch@1.4.0
         with:
           type: now
           from_branch: main
