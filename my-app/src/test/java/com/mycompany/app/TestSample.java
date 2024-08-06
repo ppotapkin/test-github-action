@@ -38,4 +38,9 @@ public class TestSample {
         Assert.assertEquals(calculator.divide(5, 0), Optional.empty());
         logger.info("Test passed");
     }
+
+    public void testDividingZeroByZero() {
+        Assert.assertEquals(calculator.divide(0, 0), Optional.empty());
+        logger.info("Test passed");
+    }
 }
