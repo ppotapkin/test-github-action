@@ -1,0 +1,21 @@
+name: Sync main -> major_rc
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Merge main -> major_rc
+        uses: devmasx/merge-branch@main
+        with:
+          type: now
+          from_branch: main
+          target_branch: major_rc
+          github_token: ${{ secrets.GITHUB_TOKEN }}
