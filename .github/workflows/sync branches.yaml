@@ -3,8 +3,6 @@ name: Sync main -> major_rc
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
