@@ -15,12 +15,4 @@ public class Calculator {
         return a * b;
     }
 
-    public Optional<Integer> divide(int a, int b) {
-        if (b == 0) {
-            return Optional.empty();
-        }
-        else {
-            return Optional.of(a / b);
-        }
-    }
 }
