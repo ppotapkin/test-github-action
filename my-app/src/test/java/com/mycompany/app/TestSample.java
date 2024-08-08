@@ -10,6 +10,7 @@ import java.util.Optional;
 @Test
 public class TestSample {
 
+
     private final Logger logger = LoggerFactory.getLogger(TestSample.class);
 
     private final Calculator calculator = new Calculator();
