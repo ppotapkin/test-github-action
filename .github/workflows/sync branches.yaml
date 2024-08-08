@@ -40,7 +40,7 @@ jobs:
     steps:
 
       - name: Merge major_rc -> major_rc_mirage
-        uses: ppotapkin/merge-branch@0.1
+        uses: ppotapkin/merge-branch
         with:
           from_branch: major_rc
           target_branch: major_rc_mirage
