@@ -40,8 +40,9 @@ jobs:
     steps:
 
       - name: Merge major_rc -> major_rc_mirage
-        uses: ppotapkin/merge-branch@v0.1.1
+        uses: ppotapkin/merge-branch@v0.1.2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           from_branch: major_rc
           target_branch: major_rc_mirage
 
