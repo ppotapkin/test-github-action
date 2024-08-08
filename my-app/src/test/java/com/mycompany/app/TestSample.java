@@ -14,8 +14,18 @@ public class TestSample {
 
     private final Calculator calculator = new Calculator();
 
-    public void testAdding() {
+    public void testAdding1() {
         Assert.assertEquals(calculator.add(2, 2), 4);
+        logger.info("Test passed");
+    }
+
+    public void testAdding2() {
+        Assert.assertEquals(calculator.add(5, 2), 7);
+        logger.info("Test passed");
+    }
+
+    public void testAdding3() {
+        Assert.assertEquals(calculator.add(5, 4), 9);
         logger.info("Test passed");
     }
 
