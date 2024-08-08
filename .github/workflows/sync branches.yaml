@@ -31,7 +31,7 @@ jobs:
           cache-dependency-path: 'my-app/pom.xml'
 
       - name: Build with Maven
-        run: mvn -f my-app/pom.xml --batch-mode --update-snapshots compile
+        run: mvn -f my-app/pom.xml --batch-mode --update-snapshots test
 
 
   merge-major_rc-to-major_rc_mirage:
@@ -61,4 +61,4 @@ jobs:
           cache-dependency-path: 'my-app/pom.xml'
 
       - name: Build with Maven
-        run: mvn -f my-app/pom.xml --batch-mode --update-snapshots compile
+        run: mvn -f my-app/pom.xml --batch-mode --update-snapshots test
