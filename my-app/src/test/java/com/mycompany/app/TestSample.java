@@ -19,6 +19,11 @@ public class TestSample {
         logger.info("Test passed");
     }
 
+    public void testSubtracting() {
+        Assert.assertEquals(calculator.subtract(5, 2), 3);
+        logger.info("Test passed");
+    }
+
     public void testMultiplication() {
         Assert.assertEquals(calculator.multiply(3, 3), 9);
         logger.info("Test passed");
