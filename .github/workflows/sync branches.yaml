@@ -40,12 +40,11 @@ jobs:
     steps:
 
       - name: Merge major_rc -> major_rc_mirage
-        uses: devmasx/merge-branch@1.4.0
+        uses: ppotapkin/merge-branch@v0.1.9
         with:
-          type: now
+          token: ${{ secrets.GITHUB_TOKEN }}
           from_branch: major_rc
           target_branch: major_rc_mirage
-          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: checkout
         uses: actions/checkout@v4
