@@ -45,6 +45,11 @@ jobs:
           from_branch: major_rc
           target_branch: major_rc_mirage
 
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: major_rc_mirage
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
