@@ -40,17 +40,10 @@ jobs:
     steps:
 
       - name: Merge major_rc -> major_rc_mirage
-        uses: devmasx/merge-branch@1.4.0
+        uses: ppotapkin/merge-branch@0.1
         with:
-          type: now
           from_branch: major_rc
           target_branch: major_rc_mirage
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          ref: major_rc_mirage
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
