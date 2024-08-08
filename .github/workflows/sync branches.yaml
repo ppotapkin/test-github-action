@@ -9,9 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: checkout
-        uses: actions/checkout@v4
-
       - name: Merge ta_mirage -> major_rc_mirage
         uses: devmasx/merge-branch@1.4.0
         with:
@@ -19,6 +16,11 @@ jobs:
           from_branch: ta_mirage
           target_branch: major_rc_mirage
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: major_rc_mirage
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -29,16 +31,15 @@ jobs:
           cache-dependency-path: 'my-app/pom.xml'
 
       - name: Build with Maven
-        run: mvn -f my-app/pom.xml --batch-mode --update-snapshots compile
+        run: |
+          git switch 
+          mvn -f my-app/pom.xml --batch-mode --update-snapshots compile
 
 
   merge-major_rc-to-major_rc_mirage:
     name: Merge major_rc to major_rc_mirage
     runs-on: ubuntu-latest
     steps:
-
-      - name: checkout
-        uses: actions/checkout@v4
 
       - name: Merge major_rc -> major_rc_mirage
         uses: devmasx/merge-branch@1.4.0
@@ -47,6 +48,11 @@ jobs:
           from_branch: major_rc
           target_branch: major_rc_mirage
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: major_rc_mirage
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
