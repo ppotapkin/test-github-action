@@ -15,4 +15,8 @@ public class Calculator {
         return a * b;
     }
 
+    public Optional<Integer> divide(int a, int b) {
+        return b == 0 ? Optional.empty() : Optional.of(a / b);
+    }
+
 }
