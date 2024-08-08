@@ -1,4 +1,4 @@
-name: Sync ta_mirage -> major_rc_mirage, major_rc -> major_rc_mirage
+name: Sync branches
 
 on:
   workflow_dispatch:
